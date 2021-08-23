@@ -182,11 +182,145 @@
 //
 // camelize("lets-do-this-ninja")
 
-function filterRange(arr, a, b){
-    let newArr = arr.filter(item => item >= a && item < b);
-    console.log(arr); // arr itself should not be modified...
-    return newArr;
+// function filterRange(arr, a, b){
+//     let newArr = arr.filter(item => item >= a && item < b);
+//     console.log(arr); // arr itself should not be modified...
+//     return newArr;
+//
+// }
+//
+// console.log(filterRange([1, 2, 3, 4, 99, 64, 12, 32], 2, 32));
 
-}
+// let arr = [5, 3, 8, 1];
+//
+// function filterRangeInPlace(arr, a, b){
+//     for (let index = 0; index < arr.length; index++ ){
+//         if (arr[index] < a || arr[index] > b){
+//             arr.splice(index, 1);
+//         }
+//     }
+//     return arr;
+// }
+//
+// console.log(filterRangeInPlace(arr, 1, 4)); // removed the numbers except from 1 to 4
 
-console.log(filterRange([1, 2, 3, 4, 99, 64, 12, 32], 2, 32));
+// function copySorted(arr) {
+//     return arr.slice().sort();
+// }
+//
+// let arr = ["HTML", "JavaScript", "CSS"];
+//
+// let sorted = copySorted(arr);
+// console.log(sorted);
+
+// function Calculator() {
+//
+//     this.functions = {
+//         "-": (a, b) => a - b,
+//         "+": (a, b) => a + b
+//     };
+//
+//     this.calculate = function(str) {
+//
+//         let split = str.split(' '),
+//             a = +split[0],
+//             op = split[1],
+//             b = +split[2];
+//
+//         if (!this.functions[op] || isNaN(a) || isNaN(b)) {
+//             return NaN;
+//         }
+//
+//         return this.functions[op](a, b);
+//     };
+//
+//     this.addMethod = function(name, func) {
+//         this.functions[name] = func;
+//     };
+// }
+//
+// let powerCalc = new Calculator;
+// powerCalc.addMethod("*", (a, b) => a * b);
+// powerCalc.addMethod("/", (a, b) => a / b);
+// powerCalc.addMethod("**", (a, b) => a ** b);
+//
+// let result = powerCalc.calculate("2 ** 3");
+// console.log( result ); // 8
+// console.log(powerCalc);
+
+// let john = { name: "John", age: 25 };
+// let pete = { name: "Pete", age: 30 };
+// let mary = { name: "Mary", age: 28 };
+//
+// let users = [ john, pete, mary ];
+//
+// let names = users.map(item => item.name)/* ... your code */
+//
+// console.log( names ); // John, Pete, Mary
+
+// let john = { name: "John", surname: "Smith", id: 1 };
+// let pete = { name: "Pete", surname: "Hunt", id: 2 };
+// let mary = { name: "Mary", surname: "Key", id: 3 };
+//
+// let users = [ john, pete, mary ];
+//
+// let usersMapped = users.map(item => ({fullName: `${item.name} ${item.surname}`, id: item.id}));
+// console.log(usersMapped);
+// function sortByAge(arr){
+//     return arr.sort((a, b) => a.age - b.age );
+// }
+//
+// let john = { name: "John", age: 25 };
+// let pete = { name: "Pete", age: 30 };
+// let mary = { name: "Mary", age: 28 };
+//
+// let arr = [ pete, john, mary ];
+// console.log(sortByAge(arr));
+
+// let john = { name: "John", age: 25 };
+// let pete = { name: "Pete", age: 30 };
+// let mary = { name: "Mary", age: 29 };
+//
+// let arr = [ john, pete, mary ];
+//
+// function getAverageAge(arr){
+//     let allAges = arr.map(item => item.age);
+//     let sum = 0;
+//     for (age of allAges){
+//         sum += age;
+//     }
+//     return sum / arr.length;
+// }
+// console.log( getAverageAge(arr) ); // (25 + 30 + 29) / 3 = 28
+
+// function unique(arr) {
+//     let resultArr = [];
+//     for (item of arr){
+//         if (!resultArr.includes(item)){
+//             resultArr.push(item)
+//         }
+//     }
+//     return resultArr;
+// }
+//
+// let strings = ["Hare", "Krishna", "Hare", "Krishna",
+//     "Krishna", "Krishna", "Hare", "Hare", ":-O"
+// ];
+// console.log(unique(strings));
+
+// let users = [
+//     {id: 'john', name: "John Smith", age: 20},
+//     {id: 'ann', name: "Ann Smith", age: 24},
+//     {id: 'pete', name: "Pete Peterson", age: 31},
+// ];
+// function groupById(arr){
+//     let newObj = {};
+//     let id;
+//     for (user of users){
+//         id = user.id;
+//         newObj[id] = user;
+//     }
+//     return newObj;
+// }
+// let usersById = groupById(users);
+// console.log(usersById);
