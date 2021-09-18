@@ -100,11 +100,15 @@ let users = [
     { name: "Ann", age: 19, surname: "Hathaway" }
 ];
 
-function byField(fieldName){
-    return function(obj1, obj2){
-        return obj1.fieldName > obj2.fieldName ? 1 : -1;
-    }
-}
+// function byField(fieldName){
+//     return function(obj1, obj2){
+//         return obj1.fieldName > obj2.fieldName ? 1 : -1;
+//     }
+// }
+
+// or write it as arrow function
+
+byField = fieldName => (obj1, obj2) => obj1.fieldName > obj2.fieldName ? 1 : -1; // shorter huh?
 
 users.sort(byField("name"));
 console.log(users);
